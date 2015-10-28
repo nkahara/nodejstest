@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+<%- include('partials/header')-%>
+<body data-ng-controller="AppCtrl">
+	<div class="container">
+		<%- include('partials/logo')-%>
+		<%- include('partials/navmenu')-%>
+
+		<h3>This is page 2.</h3>
+
+		<div data-ng-show="completed" class="ng-hide alert {{alert_type}}"><strong>{{message_bold}}</strong> {{message_content}}</div>
+
+		<button data-ng-click="ClickMe()">Click Me! </button>
+
+		<%- include('partials/footer')-%>
+
+	</div>
+</body>
+</html>

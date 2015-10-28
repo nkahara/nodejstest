@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+<%- include('partials/header')-%>
+<body data-ng-controller="ProfileCtrl">
+	<div class="container">
+		<%- include('partials/logo')-%>
+		<%- include('partials/navmenu')-%>
+
+		<div class="page-content">
+
+			<h3>Your Profile Page.</h3>
+
+			<div data-ng-show="completed" class="ng-hide alert {{alert_type}}"><strong>{{message_bold}}</strong> {{message_content}}</div>
+
+			<div class="row">
+				<div class="col-md-2">
+					Name:
+				</div>
+				<div  class="col-md-2">
+					<input type="text" ng-model="profile.name" value="<%= name %>"/>
+				</div>
+			</div>
+				<div class="row">
+				<div class="col-md-2">
+					Email:
+				</div>
+				<div  class="col-md-2">
+					<input type="text" value="{{profile.email}}"/>
+				</div>
+			</div>
+				<div class="row">
+				<div class="col-md-2">
+					Phone:
+				</div>
+				<div  class="col-md-2">
+					<input type="text" value="{{profile.phone}}"/>
+				</div>
+			</div>
+
+			<button class="btn btn-primary" data-ng-click="UpdateProfile()">Update Profile Information</button>
+
+		</div>
+		<%- include('partials/footer')-%>
+
+	</div>
+</body>
+</html>
